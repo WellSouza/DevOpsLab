@@ -16,3 +16,4 @@ install:
 # Defini o script de Teste que deve rodar toda vez que o código for alterado.                                                                                                                            
 script:                                                                                                                                                                                                  
   - pytest -v teste.py 
+
