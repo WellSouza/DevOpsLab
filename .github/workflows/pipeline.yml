@@ -1,4 +1,3 @@
-
 # Nome do Workflow
 name: DevOpsLab Pipeline
 
@@ -21,7 +20,7 @@ jobs:
           python-version: '3.7.11'
 
       - name: Install Requirements
-         run:  pip install flask
-
+        run:  pip install flask
+              
       - name: Unit Test
         run: python -m unittest -v test
