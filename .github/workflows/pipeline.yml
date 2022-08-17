@@ -24,7 +24,7 @@ jobs:
         run: pip install flask
 
       - name: Unit Test
-        run: python -m unittest -v test
+        run: python -m unittest -v teste
 
   Deploy:
     needs: Build
