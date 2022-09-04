@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 #Instalar depencdencias
-RUN pip install --trusted-host pype.phyton.org -r requeriments.txt
+RUN pip install --trusted-host pype.phyton.org -r requirements.txt
 
 #Inciar a aplicaação
 CMD ["gunicorn","app:app"]
