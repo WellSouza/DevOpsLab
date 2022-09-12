@@ -99,7 +99,7 @@ jobs:
           ARTIFACT_REGISTRY_REPO: ${{ secrets.ARTIFACT_REGISTRY_REPO }}
         uses: 'google-github-actions/deploy-cloudrun@v0'
         with:
-          service: 'Lab-8ASO-Fase5'
+          service: 'lab-8aso-fase5'
           image: ${{ secrets.ARTIFACT_REGISTRY_REPO }}/myapp:latest
       
       - name: Prod Test CloudRun
