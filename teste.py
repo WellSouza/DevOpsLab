@@ -17,5 +17,5 @@ class Test(unittest.TestCase):
                                                                                                                                                                                                          
     def test_conteudo(self):                                                                                                                                                                             
         # verifica o retorno do conteudo da pagina                                                                                                                                                       
-        self.assertEqual(self.result.data.decode('utf-8'),"Alteracao final para entrega - App Engine - DEVOPS FASE 5 - WITH GABs! Tks!")                                                                                                                                
+        self.assertEqual(self.result.data.decode('utf-8'),"Alteracao final para entrega - App Engine-Cloud Run - DEVOPS FASE 5 - WITH GABs! Tks!")                                                                                                                                
                                                                                                              
