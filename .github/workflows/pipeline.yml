@@ -90,5 +90,17 @@ jobs:
         with:
           image_url: ${{ secrets.ARTIFACT_REGISTRY_REPO }}/myapp:latest
 
-      - name: Prod Test
+      - name: Prod Test AppEngine
         run: 'curl "${{ steps.appengine.outputs.url }}"'  
+
+      - name: Deploy to Cloud Run
+        id: cloudrun
+        env: 
+          ARTIFACT_REGISTRY_REPO: ${{ secrets.ARTIFACT_REGISTRY_REPO }}
+        uses: 'google-github-actions/deploy-cloudrun@v0'
+        with:
+          service: 'hello-cloud-run'
+          image_url: ${{ secrets.ARTIFACT_REGISTRY_REPO }}/myapp:latest
+      
+      - name: Prod Test CloudRun
+        run: 'curl "${{ steps.cloudrun.outputs.url }}"'           
